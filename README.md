@@ -1,6 +1,9 @@
 # es6 practice
+	## <a href="es6.ruanyifeng.com" target="_blank">ECMAScript 6 入门</a>
+
 ## <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank">git命令</a>
 
+```
 git remote add origin < .git >
 
 git init
@@ -13,3 +16,4 @@ git commit -m 'xxx'
 
 git push -u origin master
 git push u origin master
+```
