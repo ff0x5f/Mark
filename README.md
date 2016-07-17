@@ -1,7 +1,26 @@
 # es6 practice
+
 ## <a href="http://es6.ruanyifeng.com" target=_blank>ECMAScript 6 入门</a>
 
-### let const
+### 目录结构
+```
+es6
+├── dist
+├── src                     # 源码
+├── index.html              # index.html
+├── gulpfile.js             # gulp配置文件
+├── package.json            # package.json
+└── README.md               # 文档说明
+```
+
+### 文档
+
+- [[let const]](#one)
+- [变量的解构赋值]()
+
+
+### [let const]<a name="one"></a>
+
 es6 块级作用域允许声明函数
 const 声明常量，在声明的块级作用域内生效
 var function let const import class
@@ -101,9 +120,5 @@ git status
 git commit -m 'xxx'
 
 git push -u origin master
-<<<<<<< HEAD
 git push origin master
-```
-=======
-git push u origin master
 ```
