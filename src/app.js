@@ -1,9 +1,3 @@
-function f1() {
-  let n = 6;
-  if (true) {
-    let n = 10;
-  }
-  console.log(n); // 5
-}
+let [a, b, d] = [1, [2, 3], 4];
 
-f1();
+console.log(b);
