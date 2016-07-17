@@ -1,10 +1,9 @@
-"use strict";
+var scores = [5, 8, 3, 10];
+var current = 7;
 
-var a = 1;
-var b = [2, 3];
-var d = 4;
+var x=[];
+[1, 2 ,3, 4].forEach(function(e){
+	x.push(e);
+});
 
-
-console.log(b);
-
-Math.cbrt();
+console.log(x);

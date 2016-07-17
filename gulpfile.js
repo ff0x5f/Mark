@@ -29,6 +29,7 @@ gulp.task('es6',function(){
 
 gulp.task('watch', function() {
 	gulp.watch( '*.html'); // 监听根目录下所有.html文件
+	gulp.watch( 'dist/*.js');
 	gulp.watch('src/*.js', ['es6']);
 });
 
