@@ -1,7 +1,6 @@
 # es6 practice
 ## <a href="http://es6.ruanyifeng.com" target=_blank>ECMAScript 6 入门</a>
 
-<<<<<<< HEAD
 ### let const
 es6 块级作用域允许声明函数
 const 声明常量，在声明的块级作用域内生效
@@ -87,8 +86,7 @@ let [x = 1, y = x] = [1, 2]; // x=1; y=2
 let [x = y, y = 1] = [];     // ReferenceError
 ```
 
-=======
->>>>>>> 1d6a160b9ce131a74662914aad2c2ee1f58aba21
+
 ## <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target=_blank>git命令</a>
 
 ```
@@ -109,4 +107,3 @@ git push origin master
 =======
 git push u origin master
 ```
->>>>>>> 1d6a160b9ce131a74662914aad2c2ee1f58aba21
