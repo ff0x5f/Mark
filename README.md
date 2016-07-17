@@ -4,7 +4,7 @@
 
 ### 目录结构
 ```
-es6
+ES6
 ├── dist
 ├── src                     # 源码
 ├── index.html              # index.html
@@ -15,11 +15,11 @@ es6
 
 ### 文档
 
-- [let const](#one)
-- [变量的解构赋值]()
+- [1.let const](#one)
+- [2.变量的解构赋值](#two)
 
 <a name="one"></a>
-### let const
+### 1.let const
 
 es6 块级作用域允许声明函数
 const 声明常量，在声明的块级作用域内生效
@@ -53,7 +53,8 @@ var constantize = (obj) => {
 
 ```
 
-### 变量的解构赋值
+<a name="two"></a>
+### 2.变量的解构赋值
 
 ```
 // 报错
@@ -117,8 +118,12 @@ git add .
 
 git status
 
-git commit -m 'xxx'
-
 git push -u origin master
+
+git push origin master
+git pull
+git branch --set-upstream branch-name origin/branch-name
+git pull
+git commit -m 'xxx'
 git push origin master
 ```
