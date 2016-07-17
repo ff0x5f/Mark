@@ -1,4 +1,5 @@
 # ES6 practice
+[ECMAScript 6 的新特性](https://segmentfault.com/a/1190000002904199)
 
 ## <a href="http://es6.ruanyifeng.com" target=_blank>ECMAScript 6 入门</a>
 
@@ -54,7 +55,7 @@ var constantize = (obj) => {
 ```
 
 <a name="two"></a>
-### 2. 变量的解构赋值
+### 2.1 变量的解构赋值
 
 ```
 // 报错
@@ -106,6 +107,71 @@ let [x = 1, y = x] = [1, 2]; // x=1; y=2
 let [x = y, y = 1] = [];     // ReferenceError
 ```
 
+### 2.2 对象的解构赋值
+
+### 2.3 解构赋值用途
+（1）交换变量的值
+（2）从函数返回多个值
+（3）函数参数的定义
+（4）提取JSON数据
+（5）函数参数的默认值
+（6）遍历Map结构
+（7）输入模块的指定方法
+
+## 6 数值的扩展
+
+### 6.1 Number
+
+```
+Number('0b111')  // 7
+Number('0o10')  // 8
+
+// isFinite isNaN 非数值一律返回false
+Number.isFinite(15); // true
+Number.isFinite(NaN); // false
+Number.isFinite(Infinity); // false
+
+Number.isNaN(NaN) // true
+Number.isNaN(15) // false
+
+// ES5的写法
+parseInt('12.34') // 12
+parseFloat('123.45#') // 123.45
+
+// ES6的写法
+Number.parseInt('12.34') // 12
+Number.parseFloat('123.45#') // 123.45
+
+Number.isInteger(25) // true
+Number.isInteger(25.0) // true
+Number.isInteger(25.1) // false
+Number.isInteger("15") // false
+Number.isInteger(true) // false
+
+// 极小常量 误差范围
+Number.EPSILON
+Number.EPSILON.toFixed(20)
+
+Number.isSafeInteger(Number.MAX_SAFE_INTEGER) // true
+```
+
+### 6.2 Math对象的扩展
+
+```
+// Math.cbrt方法用于计算一个数的立方根
+Math.cbrt('8') // 2
+Math.cbrt('hello') // NaN
+
+Math.trunc('123.456') //123
+Math.cbrt('8') // 2
+Math.cbrt('hello') // NaN
+
+// Math.sign方法用来判断一个数到底是正数、负数、还是零
+// 返回值 +1 -1 +0 -0 NaN
+
+// **指数运算符
+b **= 3;
+```
 
 ## <a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target=_blank>git命令</a>
 
