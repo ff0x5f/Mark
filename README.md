@@ -15,11 +15,11 @@ ES6
 
 ### 文档
 
-- [1.let const](#one)
-- [2.变量的解构赋值](#two)
+- [1. let const](#one)
+- [2. 变量的解构赋值](#two)
 
 <a name="one"></a>
-### 1.let const
+### 1. let const
 
 es6 块级作用域允许声明函数
 const 声明常量，在声明的块级作用域内生效
@@ -54,7 +54,7 @@ var constantize = (obj) => {
 ```
 
 <a name="two"></a>
-### 2.变量的解构赋值
+### 2. 变量的解构赋值
 
 ```
 // 报错
