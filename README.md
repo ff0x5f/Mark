@@ -1,4 +1,4 @@
-# es6 practice
+# ES6 practice
 
 ## <a href="http://es6.ruanyifeng.com" target=_blank>ECMAScript 6 入门</a>
 
