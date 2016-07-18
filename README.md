@@ -4,6 +4,7 @@
 [ES5 特性](https://segmentfault.com/a/1190000000515151)  
 [xx](http://www.zhihu.com/question/19834302)  
 [CSS3 Animation](http://isux.tencent.com/css3/tools.html)
+[Redux 中文文档](http://cn.redux.js.org/)
 
 ## ES5
 forEach map filter some every
