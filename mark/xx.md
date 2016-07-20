@@ -15,16 +15,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1, 
     maximum-scale=1, minimum-scale=1, user-scalable=no">
     
-    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <!-- 
+    	添加到主屏后的标题（iOS 6 新增） 
+		是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏
+		设置苹果工具栏颜色
+		添加智能 App 广告条 Smart App Banner（iOS 6+ Safari）
+		忽略页面中的数字识别为电话，忽略email识别
+    -->
     <meta name="apple-mobile-web-app-title" content="">
-    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <!-- 设置苹果工具栏颜色 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
     <meta name="apple-itunes-app" content="app-id=myAppStoreID,
     affiliate-data=myAffiliateData, app-argument=myURL">
-    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
     <meta name="format-detection" content="telphone=no, email=no"/>
     
     <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
@@ -47,15 +49,17 @@
 - 不是所有元素都需要缩放，例如 1px 的 border
 
 ```
-// 获取设备像素密度后，设置根节点的 fontSize，然后文档中全部使用 rem+px 结合
-// 通过脚本检测设备的像素密度，再设置文档的根font-size与viewport的缩放值，从而让px能够准确的显示为物理像素
-
+/**
+ * 获取设备像素密度后，设置根节点的 fontSize，然后文档中 rem+px 结合
+ * 通过脚本检测设备的像素密度，再设置文档的根 font-size 与 viewport 的缩放值，从而让px能够准确的显示为物理像素
+ */
 window.onload = function () {
     var nameAttr = document.createAttribute('name');
     nameAttr.value = 'viewport';
     var contentAttr = document.createAttribute('content');
     var dpr = window.devicePixelRatio || 1;
-    contentAttr.value = 'width=device-width,initial-scale=' + (1 / dpr) + ',target-densitydpi=device-dpi,user-scalable=no';
+    contentAttr.value = 'width=device-width,initial-scale=' + (1 / dpr) 
+    + ',target-densitydpi=device-dpi,user-scalable=no';
     var element = document.createElement('meta');
     element.attributes.setNamedItem(nameAttr);
     element.attributes.setNamedItem(contentAttr);
@@ -66,7 +70,6 @@ window.onload = function () {
 
 ```
 // 使用额外的媒体查询设置几种字体大小
-
 @media screen and (max-width: 320px) {
     body{font-size: 14px;}
 }
@@ -83,7 +86,6 @@ window.onload = function () {
 
 ```
 // SASS函数
-
 @function toRem($px){
     @return $px / 37.5px * 1rem;  // 设计稿宽度 750px
 }
