@@ -12,7 +12,9 @@
     <!-- 优先使用 IE 最新版本和 Chrome -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!-- 为移动设备添加 viewport -->
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1, 
+    maximum-scale=1, minimum-scale=1, user-scalable=no">
+    
     <!-- 添加到主屏后的标题（iOS 6 新增） -->
     <meta name="apple-mobile-web-app-title" content="">
     <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
@@ -20,9 +22,11 @@
     <!-- 设置苹果工具栏颜色 -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
-    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID,
+    affiliate-data=myAffiliateData, app-argument=myURL">
     <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
     <meta name="format-detection" content="telphone=no, email=no"/>
+    
     <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -31,12 +35,13 @@
 </head>
 ```
 
+
 ## rem 跟 px 混用
 
-[rem 关于背景图片的错位问题](http://www.cnblogs.com/cainiaoz/p/5306953.html)
-[小数像素导致背景图..]()
->浏览器在处理小数像素的时候并不是直接舍入处理的，元素依旧占据着应有的空间
-真实渲染尺寸，舍入无规律
+[rem 关于背景图片的错位问题](http://www.cnblogs.com/cainiaoz/p/5306953.html)  
+[小数像素导致背景图..](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/)  
+>浏览器在处理小数像素的时候并不是直接舍入处理的，元素依旧占据着应有的空间；真实渲染尺寸，舍入无规律
+
 
 - 解决点阵字体放大模糊的问题
 - 不是所有元素都需要缩放，例如 1px 的 border
