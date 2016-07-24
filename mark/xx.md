@@ -189,13 +189,43 @@ window.onload = function () {
  * 选择器，比如:last-child
  */
 
-// transition: property duration timing-function delay;
+// property duration timing-function delay;
 transition: all .5s ease .5s;
 
 transform: rotate(10deg);
 transform: scale(1.5);
 transform: translate(-50%,-50%);
 transform: skew(20deg);
+
+/**
+ *  <div id="animated_div">CSS3<br>
+ *      <span style="font-size:10px">动画</span>
+ *  </div>
+ */
+@keyframes animated_div
+{
+0%      { transform: rotate(0deg);left:0px; }
+25%     { transform: rotate(20deg);left:0px; }
+50%     { transform: rotate(0deg);left:500px; }
+55%     { transform: rotate(0deg);left:500px; }
+70%     { transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100%    { transform: rotate(-360deg);left:0px; }
+}
+
+.animated_div
+{
+    width:76px;
+    height:47px;
+    background:#92B901;
+    color:#ffffff;
+    position:relative;
+    font-weight:bold;
+    font-size:20px;
+    padding:10px;
+    animation:animated_div 5s infinite;
+    border-radius:5px;
+}
+
 ```
 
 
