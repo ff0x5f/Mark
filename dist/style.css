@@ -1,0 +1,13 @@
+.cs{
+	box-shadow: 1px;
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-transition: all .5s ease;
+	transition: all .5s ease;
+	border-radius: 1px;
+	-webkit-transform:rotate(30deg);
+	    -ms-transform:rotate(30deg);
+	        transform:rotate(30deg);
+	box-shadow: 10px 10px 5px #888888;
+}

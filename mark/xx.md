@@ -2,6 +2,8 @@
 - [http 请求](#two)
 - [webpack 前端模块管理和打包工具](#three)
 - [布局](#four)
+- [CSS3](#five)
+- [DOM添加、移除、移动、复制、创建和查找节点](#six)
 
 <a name="one"></a>
 # 移动端相关
@@ -100,6 +102,7 @@ window.onload = function () {
 
 <a name="two"></a>
 # http 请求
+大部分时间浪费在HTML文档所引用的图片，script，css等进行的HTTP请求上
 
 - 减少 http 请求优化性能  
  - 减少 DNS 请求所耗费的时间  
@@ -135,3 +138,111 @@ window.onload = function () {
 然后渲染左边的部分，使左边的左浮动，然后利用负边距100%，使其定位到正确位置  
 再使右边的利用float脱离文档流，再用margin-left:本身宽度，定位到正确位置  
 给中间div的子div设置正边距margin  
+
+## flex
+```
+.box {
+    // 排列方向
+    flex-direction: row | row-reverse | column | column-reverse;
+    // 换行
+    flex-wrap: nowrap | wrap | wrap-reverse;
+
+    flex-flow: <flex-direction> || <flex-wrap>;
+}
+
+.box {
+    // 主轴上的对齐方式
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+    // 交叉轴上的对齐方式
+    align-items: flex-start | flex-end | center | baseline | stretch;
+    // 如果只有一根轴线，该属性不起作用
+    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+
+.item {
+    order: <integer>;
+
+    // default 0 不放大
+    flex-grow: <number>; 
+    // default 1 缩小
+    flex-shrink: <number>;
+    // default auto 项目本来在主轴上的宽度
+    flex-basis: <length> | auto;
+    
+    // auto 可放大缩小  none 不不
+    flex: auto | none;
+    
+    // align-items  单个项目与其他项目不一样的对齐方式
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+
+```
+
+
+<a name="five"></a>
+# CSS3
+
+```
+/**
+ * 布局类，比如flex
+ * 动画类，比如转换transform, 过渡transition, 动画animation
+ * 选择器，比如:last-child
+ */
+
+// transition: property duration timing-function delay;
+transition: all .5s ease .5s;
+
+transform: rotate(10deg);
+transform: scale(1.5);
+transform: translate(-50%,-50%);
+transform: skew(20deg);
+```
+
+
+<a name="six"></a>
+# DOM添加、移除、移动、复制、创建和查找节点
+
+```
+var script = document.createElement('script');
+/**
+ * ul.className = 'ok';
+ * console.log(ul.className);
+ */
+script.setAttribute("type", "text/javascript");
+script.src = "http://aa.xx.com/js/*.js"; 
+document.body.appendChild(script);  
+
+/**
+ * children只返回HTML节点
+ * childNodes
+ * nodeType==1时才是元素节点，2是属性节点，3是文本节点
+ */
+var li = document.createElement('li');
+li.innerHTML = 'ok';
+
+ul.removeChild( ul.children[0] );
+
+ul.replaceChild( li, ul.children[0] );
+
+ul.insertBefore( li, ul.children[0] );
+```
+
+```
+// 第一个参数是上下文
+function.apply(this,[1,2,3]);
+function.call(this,1,2,3);
+```
+
+```
+http 状态码
+200
+
+301
+302
+304
+
+400
+401
+403
+404
+```
