@@ -130,6 +130,24 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
+```
+/**
+ *  <div class="left"></div>
+ *  <div class="right"></div>
+ */
+.left{
+    float: left;
+    width: 200px;
+}
+.right{
+    
+}
+```
+
+## position: absolute
+
+## 负边距
+
 >1、三列布局，中间宽度自适应，两边定宽；  
 2、中间栏要在浏览器中优先展示渲染；  
 3、允许任意列的高度最高；  
