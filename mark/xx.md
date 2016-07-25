@@ -130,6 +130,14 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
+--------------垂直居中-------------
+1、子元素position:absolute; left,right,top,bottom:0;  margin:auto
+2、子元素position:absolute; 负边距(需要知道宽高)
+3、子元素position:absolute; transform: translate(-50%, -50%)
+4、父元素display:flex; justify-content:center; align-items:center;
+5、单行文本height, line-height
+--------------多列布局-------------
+
 ```
 /**
  *  <div class="left"></div>
