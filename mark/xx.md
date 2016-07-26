@@ -130,13 +130,14 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
---------------垂直居中-------------
-1、子元素position:absolute; left,right,top,bottom:0;  margin:auto
-2、子元素position:absolute; 负边距(需要知道宽高)
-3、子元素position:absolute; transform: translate(-50%, -50%)
-4、父元素display:flex; justify-content:center; align-items:center;
-5、单行文本height, line-height
---------------多列布局-------------
+--------------垂直居中-------------  
+1、子元素position:absolute; left,right,top,bottom:0;  margin:auto  
+2、子元素position:absolute; 负边距(需要知道宽高)  
+3、子元素position:absolute; transform: translate(-50%, -50%)  
+4、父元素display:flex; justify-content:center; align-items:center;  
+5、单行文本height, line-height  
+
+--------------多列布局-------------  
 
 ```
 /**
@@ -251,6 +252,21 @@ transform: skew(20deg);
     animation:animated_div 5s infinite;
     border-radius:5px;
 }
+
+```
+
+```
+// 常用选择器 不止CSS3
+div[class="xx"]
+div>p
+
+/**
+ * 按顺序写
+ * link:连接平常的状态
+ * visited:连接被访问过之后
+ * hover:鼠标放到连接上的时候
+ * active:连接被按下的时候 
+ */
 
 ```
 
