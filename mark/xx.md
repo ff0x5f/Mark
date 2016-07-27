@@ -209,6 +209,20 @@ window.onload = function () {
 <a name="five"></a>
 # CSS3
 
+----------------xxxx-----------------  
+```
+// 三角形
+.div{
+  border-top: solid 160px transparent;
+  border-left: solid 120px #aaa;
+  border-right: 30px solid #eee;
+  border-bottom: 20px solid #fff;
+  height: 0;
+  width: 0;
+}
+```
+----------------CSS3-----------------  
+
 ```
 /**
  * 布局类，比如flex
