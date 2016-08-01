@@ -130,6 +130,22 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
+--------------高度自适应-----------  
+//nav高度50px, main根据页面高度自适应，要求content填满剩下高度
+```
+<div id="main">
+    <div id="nav">nav</div>
+    <div id="content">content</div>
+</div>
+
+// nav 设置浮动，content 设置高度100%
+
+// content设置position:absolute; top:50px; left,right,bottom设置0
+
+```
+
+
+
 --------------垂直居中-------------  
 1、子元素position:absolute; left,right,top,bottom:0;  margin:auto  
 2、子元素position:absolute; 负边距(需要知道宽高)  
