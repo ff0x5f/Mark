@@ -156,6 +156,12 @@ window.onload = function () {
 --------------多列布局-------------  
 
 ```
+// flex table(IE8有效)
+// 定宽设置float  right设置margin-left
+// 定宽设置absolute
+// calc() Android部分支持
+// div 顺序有要求 都设置float,-margin
+
 /**
  *  <div class="left"></div>
  *  <div class="right"></div>
@@ -171,7 +177,7 @@ window.onload = function () {
 
 ## position: absolute
 
-## 负边距
+## float + 负边距
 
 >1、三列布局，中间宽度自适应，两边定宽；  
 2、中间栏要在浏览器中优先展示渲染；  
