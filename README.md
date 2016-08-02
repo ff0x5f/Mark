@@ -11,3 +11,9 @@
 ## [git命令](mark/Git.md)
 
 ## [移动端相关](mark/xx.md)
+
+
+----------------------------  
+元素float之后，表现为display:inline-block  
+
+position: absolute/fixed之后，行内元素变为块级元素  
