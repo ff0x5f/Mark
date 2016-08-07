@@ -1,9 +1,10 @@
 var gulp = require('gulp'), 
 	babel = require('gulp-babel'),
 	watch = require('gulp-watch'),
+	uglify = require('gulp-uglify'),
 	minifycss = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer');
-
+	
 var livereload = require('gulp-livereload'), // 网页自动刷新
 	webserver = require('gulp-webserver');   // 本地服务器
 
@@ -29,6 +30,12 @@ gulp.task('es6',function(){
     	.pipe(gulp.dest('dist'));
 });
 
+gulp.task('minifyjs', function() {
+    return gulp.src('src/*.js')
+        .pipe(uglify())    //压缩
+        .pipe(gulp.dest('dist/js'));  //输出
+});
+
 // 浏览器前缀 压缩css
 gulp.task('css', function() {
     return gulp.src('src/*.css') 
@@ -45,7 +52,7 @@ gulp.task('watch', function() {
 	gulp.watch('*.html'); // 监听根目录下所有.html文件
 	gulp.watch('dist/*.js');
 	gulp.watch('src/*.css', ['css']);
-	gulp.watch('src/*.js', ['es6']);
+	gulp.watch('src/*.js', ['es6', 'minifyjs']);
 });
 
-gulp.task('default',['webserver', 'es6', 'css', 'watch']);
+gulp.task('default',['webserver', 'es6', 'minifyjs', 'css', 'watch']);
