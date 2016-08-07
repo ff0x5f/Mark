@@ -2,6 +2,7 @@ var gulp = require('gulp'),
 	babel = require('gulp-babel'),
 	watch = require('gulp-watch'),
 	uglify = require('gulp-uglify'),
+    sass = require('gulp-sass'),  
 	minifycss = require('gulp-minify-css'),
 	autoprefixer = require('gulp-autoprefixer');
 	
@@ -36,9 +37,11 @@ gulp.task('minifyjs', function() {
         .pipe(gulp.dest('dist/js'));  //输出
 });
 
-// 浏览器前缀 压缩css
+
+// sass 浏览器前缀 压缩css
 gulp.task('css', function() {
-    return gulp.src('src/*.css') 
+    return gulp.src('src/*.scss')
+        .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 4 versions', 'Android >= 4.0'],
             cascade: true, //是否美化属性值 默认：true

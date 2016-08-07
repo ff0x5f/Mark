@@ -130,6 +130,55 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
+--------------高度自适应-----------  
+//nav高度50px, main根据页面高度自适应，要求content填满剩下高度
+```
+<div id="main">
+    <div id="nav">nav</div>
+    <div id="content">content</div>
+</div>
+
+// nav 设置浮动，content 设置高度100%
+
+// content设置position:absolute; top:50px; left,right,bottom设置0
+
+```
+
+
+
+--------------垂直居中-------------  
+1、子元素position:absolute; left,right,top,bottom:0;  margin:auto  
+2、子元素position:absolute; 负边距(需要知道宽高)  
+3、子元素position:absolute; transform: translate(-50%, -50%)  
+4、父元素display:flex; justify-content:center; align-items:center;  
+5、单行文本height, line-height  
+
+--------------多列布局-------------  
+
+```
+// flex table(IE8有效)
+// 定宽设置float  right设置margin-left
+// 定宽设置absolute
+// calc() Android部分支持
+// div 顺序有要求 都设置float,-margin
+
+/**
+ *  <div class="left"></div>
+ *  <div class="right"></div>
+ */
+.left{
+    float: left;
+    width: 200px;
+}
+.right{
+    
+}
+```
+
+## position: absolute
+
+## float + 负边距
+
 >1、三列布局，中间宽度自适应，两边定宽；  
 2、中间栏要在浏览器中优先展示渲染；  
 3、允许任意列的高度最高；  
@@ -182,6 +231,20 @@ window.onload = function () {
 <a name="five"></a>
 # CSS3
 
+----------------xxxx-----------------  
+```
+// 三角形
+.div{
+  border-top: solid 160px transparent;
+  border-left: solid 120px #aaa;
+  border-right: 30px solid #eee;
+  border-bottom: 20px solid #fff;
+  height: 0;
+  width: 0;
+}
+```
+----------------CSS3-----------------  
+
 ```
 /**
  * 布局类，比如flex
@@ -189,13 +252,68 @@ window.onload = function () {
  * 选择器，比如:last-child
  */
 
-// transition: property duration timing-function delay;
+// property duration timing-function delay;
 transition: all .5s ease .5s;
 
 transform: rotate(10deg);
 transform: scale(1.5);
 transform: translate(-50%,-50%);
 transform: skew(20deg);
+
+/**
+ *  <div id="animated_div">CSS3<br>
+ *      <span style="font-size:10px">动画</span>
+ *  </div>
+ */
+@keyframes animated_div
+{
+0%      { transform: rotate(0deg);left:0px; }
+25%     { transform: rotate(20deg);left:0px; }
+50%     { transform: rotate(0deg);left:500px; }
+55%     { transform: rotate(0deg);left:500px; }
+70%     { transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100%    { transform: rotate(-360deg);left:0px; }
+}
+
+.animated_div
+{
+    width:76px;
+    height:47px;
+    background:#92B901;
+    color:#ffffff;
+    position:relative;
+    font-weight:bold;
+    font-size:20px;
+    padding:10px;
+    animation:animated_div 5s infinite;
+    border-radius:5px;
+}
+
+```
+
+```
+// 常用选择器 不止CSS3
+div[class="xx"]
+div>p
+
+/**
+ * 按顺序写
+ * link:连接平常的状态
+ * visited:连接被访问过之后
+ * hover:鼠标放到连接上的时候
+ * active:连接被按下的时候 
+ */
+
+<div>
+	<h1>这是标题</h1>
+	<p>第一个段落。</p>
+	<p>第二个段落。</p>
+	<p>第三个段落。</p>
+	<p>第四个段落。</p>
+</div>
+
+p:nth-of-type(2n) //二四段落
+p:nth-child(2n) //一三段落
 ```
 
 
@@ -235,14 +353,16 @@ function.call(this,1,2,3);
 
 ```
 http 状态码
-200
+200 ok
 
-301
-302
-304
+301 永久移动  
+302 临时移动  
+304 请求资源没更新
 
-400
-401
-403
-404
+400 请求语法错误
+401 未授权
+403 拒绝
+404 不存在
+
+500 服务器内部错误
 ```
