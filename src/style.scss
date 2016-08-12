@@ -1,0 +1,40 @@
+*{margin: 0; padding: 0;}
+
+// flex table(IE8有效)
+// 定宽设置float  right设置margin-left
+// 定宽设置absolute
+// calc() Android部分支持
+// div 顺序有要求 都设置float,-margin
+//
+.wrapper{
+  position: relative;
+  .div{
+    float: left;
+    //margin-left: 40px;
+    //padding-left: 40px;
+    width: 100%;
+
+    height: 400px;
+    background: #eee;
+    .content{
+      position: absolute;
+      top:100px;
+      left: 100px;
+
+      width: 200px;
+      height: 200px;
+      background: #888;
+
+    }
+  }
+
+}
+
+
+.div2{
+  float: left;
+  width: 200px;
+
+  height: 200px;
+  background: #666;
+}

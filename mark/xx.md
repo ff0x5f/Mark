@@ -20,11 +20,11 @@
     <!-- 优先使用 IE 最新版本和 Chrome -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <!-- 为移动设备添加 viewport -->
-    <meta name="viewport" content="width=device-width,initial-scale=1, 
+    <meta name="viewport" content="width=device-width,initial-scale=1,
     maximum-scale=1, minimum-scale=1, user-scalable=no">
-    
-    <!-- 
-    	添加到主屏后的标题（iOS 6 新增） 
+
+    <!--
+    	添加到主屏后的标题（iOS 6 新增）
 		是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏
 		设置苹果工具栏颜色
 		添加智能 App 广告条 Smart App Banner（iOS 6+ Safari）
@@ -36,7 +36,7 @@
     <meta name="apple-itunes-app" content="app-id=myAppStoreID,
     affiliate-data=myAffiliateData, app-argument=myURL">
     <meta name="format-detection" content="telphone=no, email=no"/>
-    
+
     <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -48,8 +48,8 @@
 
 ## rem 跟 px 混用
 
-[rem 关于背景图片的错位问题](http://www.cnblogs.com/cainiaoz/p/5306953.html)  
-[小数像素导致背景图..](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/)  
+[rem 关于背景图片的错位问题](http://www.cnblogs.com/cainiaoz/p/5306953.html)
+[小数像素导致背景图..](http://taobaofed.org/blog/2015/11/04/mobile-rem-problem/)
 >浏览器在处理小数像素的时候并不是直接舍入处理的，元素依旧占据着应有的空间；真实渲染尺寸，舍入无规律
 
 
@@ -66,7 +66,7 @@ window.onload = function () {
     nameAttr.value = 'viewport';
     var contentAttr = document.createAttribute('content');
     var dpr = window.devicePixelRatio || 1;
-    contentAttr.value = 'width=device-width,initial-scale=' + (1 / dpr) 
+    contentAttr.value = 'width=device-width,initial-scale=' + (1 / dpr)
     + ',target-densitydpi=device-dpi,user-scalable=no';
     var element = document.createElement('meta');
     element.attributes.setNamedItem(nameAttr);
@@ -104,11 +104,11 @@ window.onload = function () {
 # http 请求
 大部分时间浪费在HTML文档所引用的图片，script，css等进行的HTTP请求上
 
-- 减少 http 请求优化性能  
- - 减少 DNS 请求所耗费的时间  
- - 减少服务器压力  
- - 合并脚本和样式  
->网页类型,一种偏向内容,一种则偏向应用.对于内容型的网站,脚本并不是很重要(甚至样式),因为没有脚本,用户仍然可以浏览页面,只是可能有些效果看不到而已,所以我们可以把脚本合并起来,一起放在body底部,在页面内容都加载完后,再一次性加载进来.  
+- 减少 http 请求优化性能
+ - 减少 DNS 请求所耗费的时间
+ - 减少服务器压力
+ - 合并脚本和样式
+>网页类型,一种偏向内容,一种则偏向应用.对于内容型的网站,脚本并不是很重要(甚至样式),因为没有脚本,用户仍然可以浏览页面,只是可能有些效果看不到而已,所以我们可以把脚本合并起来,一起放在body底部,在页面内容都加载完后,再一次性加载进来.
 而对于应用型的网页,让应用跑起来才是最重要的,因为没有应用这个网页就变得没有意义了,这时候,`按需加载`脚本是一种趋势,我们需要先把应用的基本框架和功能按需加载进 ,让它们分别运行起来,而不是一起等脚本加载完再一起初始化,我们需要应用能够快速响应用户
 
  - 减少 http 请求头
@@ -116,7 +116,7 @@ window.onload = function () {
 
 
 <a name="three"></a>
-# webpack 
+# webpack
 
 - 前端模块管理和打包工具
  - webpack-dev-server
@@ -130,7 +130,7 @@ window.onload = function () {
 <a name="four"></a>
 # 布局
 
---------------高度自适应-----------  
+--------------高度自适应-----------
 //nav高度50px, main根据页面高度自适应，要求content填满剩下高度
 ```
 <div id="main">
@@ -146,14 +146,14 @@ window.onload = function () {
 
 
 
---------------垂直居中-------------  
-1、子元素position:absolute; left,right,top,bottom:0;  margin:auto  
-2、子元素position:absolute; 负边距(需要知道宽高)  
-3、子元素position:absolute; transform: translate(-50%, -50%)  
-4、父元素display:flex; justify-content:center; align-items:center;  
-5、单行文本height, line-height  
+--------------垂直居中-------------
+1、子元素position:absolute; left,right,top,bottom:0;  margin:auto
+2、子元素position:absolute; 负边距(需要知道宽高)
+3、子元素position:absolute; transform: translate(-50%, -50%)
+4、父元素display:flex; justify-content:center; align-items:center;
+5、单行文本height, line-height
 
---------------多列布局-------------  
+--------------多列布局-------------
 
 ```
 // flex table(IE8有效)
@@ -171,7 +171,7 @@ window.onload = function () {
     width: 200px;
 }
 .right{
-    
+
 }
 ```
 
@@ -179,14 +179,14 @@ window.onload = function () {
 
 ## float + 负边距
 
->1、三列布局，中间宽度自适应，两边定宽；  
-2、中间栏要在浏览器中优先展示渲染；  
-3、允许任意列的高度最高；  
+>1、三列布局，中间宽度自适应，两边定宽；
+2、中间栏要在浏览器中优先展示渲染；
+3、允许任意列的高度最高；
 
-先给中间的div渲染，使其宽度为100%，高度自己定义，用float使其脱离文档流  
-然后渲染左边的部分，使左边的左浮动，然后利用负边距100%，使其定位到正确位置  
-再使右边的利用float脱离文档流，再用margin-left:本身宽度，定位到正确位置  
-给中间div的子div设置正边距margin  
+先给中间的div渲染，使其宽度为100%，高度自己定义，用float使其脱离文档流
+然后渲染左边的部分，使左边的左浮动，然后利用负边距100%，使其定位到正确位置
+再使右边的利用float脱离文档流，再用margin-left:本身宽度，定位到正确位置
+给中间div的子div设置正边距margin
 
 ## flex
 ```
@@ -212,15 +212,15 @@ window.onload = function () {
     order: <integer>;
 
     // default 0 不放大
-    flex-grow: <number>; 
+    flex-grow: <number>;
     // default 1 缩小
     flex-shrink: <number>;
     // default auto 项目本来在主轴上的宽度
     flex-basis: <length> | auto;
-    
+
     // auto 可放大缩小  none 不不
     flex: auto | none;
-    
+
     // align-items  单个项目与其他项目不一样的对齐方式
     align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
@@ -231,7 +231,7 @@ window.onload = function () {
 <a name="five"></a>
 # CSS3
 
-----------------xxxx-----------------  
+----------------xxxx-----------------
 ```
 // 三角形
 .div{
@@ -243,13 +243,15 @@ window.onload = function () {
   width: 0;
 }
 ```
-----------------CSS3-----------------  
+----------------CSS3-----------------
 
 ```
 /**
  * 布局类，比如flex
  * 动画类，比如转换transform, 过渡transition, 动画animation
  * 选择器，比如:last-child
+ *
+ * box-sizing keyframes
  */
 
 // property duration timing-function delay;
@@ -301,7 +303,7 @@ div>p
  * link:连接平常的状态
  * visited:连接被访问过之后
  * hover:鼠标放到连接上的时候
- * active:连接被按下的时候 
+ * active:连接被按下的时候
  */
 
 <div>
@@ -327,8 +329,8 @@ var script = document.createElement('script');
  * console.log(ul.className);
  */
 script.setAttribute("type", "text/javascript");
-script.src = "http://aa.xx.com/js/*.js"; 
-document.body.appendChild(script);  
+script.src = "http://aa.xx.com/js/*.js";
+document.body.appendChild(script);
 
 /**
  * children只返回HTML节点
@@ -355,8 +357,8 @@ function.call(this,1,2,3);
 http 状态码
 200 ok
 
-301 永久移动  
-302 临时移动  
+301 永久移动
+302 临时移动
 304 请求资源没更新
 
 400 请求语法错误

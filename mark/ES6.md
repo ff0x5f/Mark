@@ -1,7 +1,67 @@
 # ES6 practice
 
-[ECMAScript 6 的新特性](https://segmentfault.com/a/1190000002904199)  
-[ES5 特性](https://segmentfault.com/a/1190000000515151)  
+[ECMAScript 6 的新特性](https://segmentfault.com/a/1190000002904199)
+[ES5 特性](https://segmentfault.com/a/1190000000515151)
+
+## Array String 方法
+
+```
+// Array
+array.concat(item)
+array.join(separator)
+array.pop()
+array.push(item...) //返回新的数组长度
+arr.shift()
+arr.unshift() //返回新的数组长度
+array.slice(start, end)
+
+//以下3个会改变原数组
+arr.splice(start, deleteCount, item...)
+array.sort(comparefn)
+array.reverse() //返回新的数组
+
+// unshift 可以这样实现
+Array.method('unshift',function(){
+  this.splice.apply(this,
+    [0,0].concat( Array.prototype.slice.apply(arguments) ));
+});
+```
+
+```
+// number 常用
+number.toFixed(2) //参数0-20
+number.toString(radix) //参数2-36 进制基数
+
+// Object
+object.hasOwnProperty(name)
+
+// RegExp
+regexp.exec(string) // 不使用/g，返回数组，下标0匹配子字符串，下标1...匹配分组
+
+// String
+string.charAt(pos)
+string.charCodeAt(pos)  //字符码位
+
+```
+
+## js
+```
+// 事件冒泡
+function clickCounter(){
+  var i = 1;
+  return function(e){
+    var e = e || window.event;
+    e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+    // e.target == this 也可以判断是否为目标事件
+    console.log(i++)
+  }
+}
+
+dom.addEventListener('click', clickCounter());
+
+// e.preventDefault ? e.preventDefault() : e.returnValue = false;
+```
+
 
 ## ES5
 forEach map filter some every
