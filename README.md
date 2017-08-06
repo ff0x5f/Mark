@@ -6,6 +6,7 @@
 [Redux 中文文档（react）](http://cn.redux.js.org/)  
 [Examples · facebook/react Wiki](https://github.com/facebook/react/wiki/Examples)  
 [什么时候要在React组件中写shouldComponentUpdate](http://www.infoq.com/cn/news/2016/07/react-shouldComponentUpdate?utm_campaign=rightbar_v2&utm_source=infoq&utm_medium=news_link&utm_content=link_text)  
+[flex骰子布局](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)   
 
 ## [ES6 practice](mark/ES6.md)
 
